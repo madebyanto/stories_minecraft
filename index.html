@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Storie di Minecraft</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Press Start 2P', cursive;
+      background: url('https://i.imgur.com/oV1s4OI.png'); /* Sfondo erba */
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .container {
+      background-color: rgba(34, 139, 34, 0.85);
+      padding: 30px;
+      border: 5px solid #2d2d2d;
+      border-radius: 12px;
+      display: inline-block;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #story {
+      font-size: 14px;
+      margin: 20px 0;
+    }
+
+    button {
+      background-color: #228B22;
+      border: 2px solid #2d2d2d;
+      color: white;
+      padding: 10px 20px;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: 'Press Start 2P', cursive;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #32CD32;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📖 Storie Minecraft</h1>
+    <div id="story">Premi il pulsante per leggere una storia!</div>
+    <button onclick="showStory()">Nuova storia</button>
+  </div>
+
+  <script>
+    const stories = [
+      "Una volta, Steve ha costruito una casa sull'acqua... ma ha dimenticato di dormire. Gli spawn dei phantoms lo aspettavano!",
+      "Alex ha trovato tre diamanti... ma mentre scavava, è caduta nella lava. Rip diamanti.",
+      "Una mucca ha seguito Steve fino alla sua base. Ora è la mascotte ufficiale del villaggio!",
+      "Uno scheletro ha combattuto un ragno… e ha perso. Team Ragni: 1, Team Scheletri: 0.",
+      "Herobrine? No, era solo un villager con gli occhi bianchi. O forse no...",
+      "Un creeper ha fatto esplodere il tetto della casa di Steve. Adesso è una casa con 'vista cielo'.",
+      "Un lupo è stato salvato da una caduta e ora segue Alex ovunque. Fedeltà livello 100."
+    ];
+
+    function showStory() {
+      const randomIndex = Math.floor(Math.random() * stories.length);
+      document.getElementById("story").innerText = stories[randomIndex];
+    }
+  </script>
+</body>
+</html>
